@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: tic-tac-toe
+  namespace: tic-tac
   labels:
     app: tic-tac-toe
 spec:
@@ -16,7 +17,7 @@ spec:
     spec:
       containers:
       - name: tic-tac-toe
-        image: sampatel8543/devsecops-demo:sha
+        image: sampatel8543/devsecops-demo:latest
         # Image will be automatically updated by CI/CD pipeline
         imagePullPolicy: Always
         ports:
